@@ -32,7 +32,4 @@
 ## Home
 - Após o login bem-sucedido, o usuário é direcionado para a HomePage (Dashboard), que contém uma saudação e um botão de logout na AppBar.
 
-# Detalhes Técnicos (Setup)
-
-- Compatibilidade: Configurado para rodar em Android, iOS e Web.
 
