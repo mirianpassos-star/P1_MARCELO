@@ -1,17 +1,29 @@
-# p1_marcelo
+# Entrega do Projeto Avaliativo: 11Miles
+# 1. Arquitetura Adotada
+## O aplicativo utiliza o padrão Repository, com uma separação clara entre a interface e a lógica de dados:
 
-A new Flutter project.
+- View (Camada de UI): Telas construídas com Flutter (ex: LoginPage, RegisterPage) que utilizam o Material Design.
 
-## Getting Started
+- Model: Classe UserModel que define a estrutura de dados do usuário.
 
-This project is a starting point for a Flutter application.
+- Repository: Classe UserRepository que atua como um Mock, gerenciando uma lista estática de usuários em memória para simular persistência sem banco de dados externo.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Navegação: Gerenciamento de rotas nomeadas para transições entre telas.
+## Splash
+- A tela inicial exibe o ícone rocket_launch e o título "11Miles" inclinado. Ela possui um Future.delayed de 4 segundos que redireciona para a tela de login.
+## Login
+- Interface com campos de e-mail e senha. Utiliza TextEditingController para capturar a entrada do usuário e validar o acesso através do repositório.
+## Cadastro
+- Permite o registro de novos usuários. Os dados (Nome, E-mail, Senha) são validados e, se preenchidos, são adicionados à lista do UserRepository.
+## Retorno ao Login	
+- Após o cadastro, o app utiliza Navigator.pop(context) para voltar à tela anterior e exibe um SnackBar confirmando o sucesso.
+## Autenticação	
+- O método UserRepository.checkLogin verifica se as credenciais digitadas existem na lista. Caso contrário, um alerta de erro em vermelho é mostrado.
+## Home
+- Após o login bem-sucedido, o usuário é direcionado para a HomePage (Dashboard), que contém uma saudação e um botão de logout na AppBar.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Detalhes Técnicos (Setup)
+
+- Compatibilidade: Configurado para rodar em Android, iOS e Web.
+
