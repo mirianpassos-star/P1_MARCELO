@@ -1,4 +1,13 @@
 # Entrega do Projeto Avaliativo: 11Miles
+ ### INTEGRANTES:
+  - Alice dos Santos Maganhoto
+    ### RA:25000188
+  - Mirian Suelen Passos
+    ### RA:25000699
+
+  - Amanda Rodrigues Pristupa Martins
+     ### RA:25000009
+
 # 1. Arquitetura Adotada
 ## O aplicativo utiliza o padrão Repository, com uma separação clara entre a interface e a lógica de dados:
 
